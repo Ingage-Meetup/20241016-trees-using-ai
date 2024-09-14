@@ -1,43 +1,125 @@
-# C3ProjectTemplate
+# Binary Tree vs. Red-Black Tree: AI-Assisted Performance Comparison Kata
 
-See solutions in different languages in the "Templates" directory. Once you decide which language you'd like to use,
-simply open that directory in your favorite IDE, and you should be able to run the included unit tests "out of the box".
+## Overview
 
-## Duplicating this Repo
+This kata is designed to give developers hands-on experience with two fundamental data structures—Binary Search Trees (BST) and Red-Black Trees (RBT)—while encouraging the use of AI tools as an augmentation to their coding skills.
 
-To create a duplicate repository from this one, follow these steps:
+Participants will implement both a binary search tree and a red-black tree, instrumented to count the number of operations (insertions, deletions, and lookups). By comparing the performance of these trees on two datasets (one sorted and one randomized), participants will gain insights into the efficiency of these structures under different conditions.
 
-1. Create your new repository. For example, MyNewRepo.
+### AI Integration
+- **Copilot**: You can rely on Copilot to assist with code generation, such as building the tree structures and counting operations. However, it's important to review, modify, and understand the code that is generated.
+- **ChatGPT**: ChatGPT is available for answering questions, providing clarifications, or offering explanations about tree structures, algorithm efficiency, or the performance analysis.
 
-2. Open Git Bash.
+---
 
-3. Create a bare clone of the repository.
+## Kata Requirements
 
-    ```
-    git clone --bare https://github.com/Ingage-Meetup/MyNewRepo.git
-    ```
+### 1. Data Structures
+- **Binary Search Tree**: A traditional binary search tree (BST) with insertion, deletion, and search methods.
+- **Red-Black Tree**: A self-balancing binary tree that maintains balance via color-coding nodes. This tree should implement balancing logic for insertions and deletions.
 
-4. Mirror-push to the new repository.
+### 2. Instrumentation
+- Each operation (insertions, deletions, and lookups) should be instrumented to count the number of steps or comparisons made during execution.
+
+### 3. Datasets
+- **Sorted List**: One file contains a list of over 100,000 names sorted alphabetically.
+- **Randomized List**: Another file contains the same names, but in a random order.
+- Both files will be used for insertion, deletion, and lookup operations, with performance comparisons made between the datasets.
+
+### 4. Operations to Implement
+- **Insertion**: Insert all names from both datasets into the binary search tree and the red-black tree.
+- **Lookup**: Perform lookups on a random subset of names in both trees and record the number of comparisons.
+- **Deletion**: Remove a random subset of names from both trees and track the number of operations.
+
+### 5. Comparative Analysis
+- Compare the number of operations for insertions, lookups, and deletions between the two tree structures for both datasets (sorted and random).
   
-    ```
-    cd MyNewRepo.git
-    git push --mirror https://github.com/Ingage-Meetup/MyNewRepo.git
-    ```
+---
 
-5. Remove the temporary local repository you created earlier.
+## Step-by-Step Instructions
 
-    ```
-    cd ..
-    rm -rf OLD-REPOSITORY.git
-    ```
+### Step 1: Set Up the Project
+- **Responsibility**: Programmer
+   - Create the project directory and set up the development environment.
+   - Create two files: one for the Binary Search Tree (BST) and one for the Red-Black Tree (RBT).
+   - Prepare the input data files: one with the sorted list and another with the randomized list of 100,000 names.
 
-Your new repository now contains a mirror of this repo.
+### Step 2: Define the Binary Search Tree Class
+- **Responsibility**: Programmer & Copilot
+   - **Programmer**: Outline the class structure for the binary tree, including methods for insertion, deletion, and search.
+   - **Copilot**: Assist with generating the basic structure for the BST.
 
-The recommended IDEs are as follows, but feel free to use whatever IDE you are comfortable with.
+### Step 3: Instrument the Binary Search Tree
+- **Responsibility**: Programmer & Copilot
+   - **Programmer**: Insert counters to track the number of operations (comparisons/steps) for each method.
+   - **Copilot**: Help suggest where to place counters and assist with incrementing logic.
 
--   [C#](Templates/C%23) - [Microsoft Visual Studio](https://visualstudio.microsoft.com/vs/community/)
--   [Java](Templates/Java) - [IntelliJ Idea](https://www.jetbrains.com/idea/download) (Community Edition is fine)
--   [JavaScript](Templates/JavaScript) - [Microsoft Visual Studio Code](https://code.visualstudio.com/)
--   [Kotlin](Templates/Kotlin) - [IntelliJ Idea](https://www.jetbrains.com/idea/download) (Community Edition is fine)
--   [Python](Templates/Python) - [Pycharm](https://www.jetbrains.com/pycharm/download/?section=windows) (Community Edition is fine)
--   [TypeScript](Templates/TypeScript) - [Microsoft Visual Studio Code](https://code.visualstudio.com/)
+### Step 4: Consult ChatGPT for Tree Performance Insights
+- **Responsibility**: Programmer & ChatGPT
+   - **Programmer**: If uncertain about how to count operations or the degenerate nature of binary trees, ask ChatGPT.
+   - **ChatGPT**: Provide explanations on binary tree behavior when unbalanced.
+
+### Step 5: Define the Red-Black Tree Class
+- **Responsibility**: Programmer & Copilot
+   - **Programmer**: Outline the class structure for the red-black tree, including insertion, deletion, and search with balancing logic.
+   - **Copilot**: Assist with generating the scaffolding for the RBT and its balancing methods.
+
+### Step 6: Instrument the Red-Black Tree
+- **Responsibility**: Programmer & Copilot
+   - **Programmer**: Instrument the red-black tree to count operations.
+   - **Copilot**: Assist with logic to track and count operations within the balancing methods.
+
+### Step 7: Verify the Balancing Logic
+- **Responsibility**: Programmer & ChatGPT
+   - **Programmer**: If unsure about red-black tree balancing rules, consult ChatGPT.
+   - **ChatGPT**: Provide explanations of red-black tree properties (e.g., red/black rules, balancing).
+
+### Step 8: Load the Datasets into the Trees
+- **Responsibility**: Programmer & Copilot
+   - **Programmer**: Write code to read the sorted and randomized datasets.
+   - **Copilot**: Help generate code to load the data into the tree structures.
+
+### Step 9: Perform Batch Insertions
+- **Responsibility**: Programmer
+   - Insert all names from the datasets into both tree structures and count the number of operations.
+
+### Step 10: Perform Batch Lookups
+- **Responsibility**: Programmer
+   - Select a random subset of names and perform lookups in both trees. Count the number of comparisons.
+
+### Step 11: Perform Batch Deletions
+- **Responsibility**: Programmer
+   - Randomly remove a subset of names from both trees and count the operations involved.
+
+### Step 12: Analyze Performance
+- **Responsibility**: Programmer & ChatGPT
+   - Compile the data from insertions, lookups, and deletions. Analyze and compare the results.
+   - Consult ChatGPT if additional analysis or clarification is needed.
+
+### Step 13: Create Graphs/Tables for Comparison
+- **Responsibility**: Programmer
+   - Generate graphs or tables to show comparative performance results.
+
+### Step 14: Optional Stretch Goals
+- **Responsibility**: Programmer & Copilot
+   - Implement additional structures like AVL trees for advanced comparison.
+   - Copilot can assist in generating the structure for the additional data structures.
+
+---
+
+## Evaluation Criteria
+- Proper implementation of both binary search tree and red-black tree.
+- Accurate instrumentation for counting operations.
+- Clear comparison of results for both datasets.
+- Effective use of Copilot and ChatGPT to assist, without relying solely on AI to complete the task.
+
+---
+
+## Stretch Goals (Optional)
+- Implement an additional self-balancing tree like an **AVL Tree** for advanced comparison.
+- Experiment with optimization techniques or alternative data structures.
+
+---
+
+Happy coding! Use AI to assist, but remember—**you** are the one in control of your code.
+
