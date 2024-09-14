@@ -38,11 +38,15 @@ Participants will implement both a binary search tree and a red-black tree, inst
 
 ## Step-by-Step Instructions
 
-### Step 1: Set Up the Project
+### Step 1: Project Setup
 - **Responsibility**: Programmer
-   - Create the project directory and set up the development environment.
-   - Create two files: one for the Binary Search Tree (BST) and one for the Red-Black Tree (RBT).
-   - Prepare the input data files: one with the sorted list and another with the randomized list of 100,000 names.
+   - Create a folder to contain the project
+   - Clone this repository
+   - Create a branch to contain your code
+   - Choose an implementation language
+   - The repository contains two input data files:
+     - `sorted_names.txt`: Contains a list of over 100,000 names sorted alphabetically.
+     - `randomized_names.txt`: Contains the same list but in random order.
 
 ### Step 2: Define the Binary Search Tree Class
 - **Responsibility**: Programmer & Copilot
@@ -84,8 +88,9 @@ Participants will implement both a binary search tree and a red-black tree, inst
    - Insert all names from the datasets into both tree structures and count the number of operations.
 
 ### Step 10: Perform Batch Lookups
-- **Responsibility**: Programmer
-   - Select a random subset of names and perform lookups in both trees. Count the number of comparisons.
+- **Responsibility**: Programmer and ChatGPT
+   - **Programmer**: Select a random subset of names and perform lookups in both trees. Count the number of comparisons.
+   - **ChatGPT**: Assist in extracting a randome subset of names from the data files.
 
 ### Step 11: Perform Batch Deletions
 - **Responsibility**: Programmer
@@ -112,12 +117,6 @@ Participants will implement both a binary search tree and a red-black tree, inst
 - Accurate instrumentation for counting operations.
 - Clear comparison of results for both datasets.
 - Effective use of Copilot and ChatGPT to assist, without relying solely on AI to complete the task.
-
----
-
-## Stretch Goals (Optional)
-- Implement an additional self-balancing tree like an **AVL Tree** for advanced comparison.
-- Experiment with optimization techniques or alternative data structures.
 
 ---
 
