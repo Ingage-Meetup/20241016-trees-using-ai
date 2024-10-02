@@ -50,65 +50,57 @@ Participants will implement both a binary search tree and a red-black tree, inst
 
 ### Step 2: Define the Binary Search Tree Class
 - **Responsibility**: Programmer & Copilot
-   - **Programmer**: Outline the class structure for the binary tree, including methods for insertion, deletion, and search.
-   - **Copilot**: Assist with generating the basic structure for the BST.
+   - **Programmer**: Use Copilot to generate a BST class, including methods for insertion, deletion, and search. You will probably also want a method to print out the tree so you can verify the operation of the code.
+   - **Copilot**: Assist with generating the BST class and it's requisite methods.
+ 
+### Step 3: Write tests verify the the tree and it's method are correct.
+- **Responsibility**: Programmer and Copilot
+  - **Programmer**: Use Copilot to generate tests to verify insertion, deletion, search, and print for the BST.
+  - **Copilot**: Generate the tests.
 
-### Step 3: Instrument the Binary Search Tree
+### Step 4: Instrument the Binary Search Tree
 - **Responsibility**: Programmer & Copilot
-   - **Programmer**: Insert counters to track the number of operations (comparisons/steps) for each method.
-   - **Copilot**: Help suggest where to place counters and assist with incrementing logic.
-
-### Step 4: Consult ChatGPT for Tree Performance Insights
-- **Responsibility**: Programmer & ChatGPT
-   - **Programmer**: If uncertain about how to count operations or the degenerate nature of binary trees, ask ChatGPT.
-   - **ChatGPT**: Provide explanations on binary tree behavior when unbalanced.
-
-### Step 5: Define the Red-Black Tree Class
+   - **Programmer**: Use Copilot to insert counters to track the number of comparisons performed by each method for each method. Ensure you are able to roll up the counters to a total number of comparisons and that you are able to retrieve the counts.
+   - **Copilot**: Help suggest where to place counters and assist with incrementing/rollup logic.
+ 
+### Step 5: Write tests verify the the instrumentation is working correctly.
+- **Responsibility**: Programmer and Copilot
+  - **Programmer**: Use Copilot to generate tests to verify instrumentation.
+  - **Copilot**: Generate the tests.
+  - 
+### Step 6: Define the Red-Black Tree Class
 - **Responsibility**: Programmer & Copilot
-   - **Programmer**: Outline the class structure for the red-black tree, including insertion, deletion, and search with balancing logic.
-   - **Copilot**: Assist with generating the scaffolding for the RBT and its balancing methods.
+   - **Programmer**: Use Copilot to generate a red-black tree, including insertion, deletion, rebalance, and search with balancing logic.
+   - **Copilot**: Assist with generating the RBT and its methods.
+ 
+### Step 7: Write tests verify the the RBT and it's method are correct.
+- **Responsibility**: Programmer and Copilot
+  - **Programmer**: Use Copilot to generate tests to verify all methods for the BST. Include tests to verify that the RBT is remaining balanced.
+  - **Copilot**: Generate the tests.
 
-### Step 6: Instrument the Red-Black Tree
+### Step 8: Instrument the Red-Black Tree
 - **Responsibility**: Programmer & Copilot
    - **Programmer**: Instrument the red-black tree to count operations.
    - **Copilot**: Assist with logic to track and count operations within the balancing methods.
+ 
+### Step 9: Write tests verify the the instrumentation for the RBT is working correctly.
+- **Responsibility**: Programmer and Copilot
+  - **Programmer**: Use Copilot to generate tests to verify instrumentation.
+  - **Copilot**: Generate the tests.
 
-### Step 7: Verify the Balancing Logic
-- **Responsibility**: Programmer & ChatGPT
-   - **Programmer**: If unsure about red-black tree balancing rules, consult ChatGPT.
-   - **ChatGPT**: Provide explanations of red-black tree properties (e.g., red/black rules, balancing).
-
-### Step 8: Load the Datasets into the Trees
+### Step 10: For each of the full datasets and each type of tree, write tests to measure performance.:
+#### Step 10a: Load the dataset into the tree and record the number of operations.
+#### Step 10b: Insert a number of test strings at different places in the alphabet and record the number of operations.
+#### Step 10c: Delete the strings inserted in the previous step and record the number of operations.
+#### Note: You should have 4 executions for Steps 10a-10c,  
 - **Responsibility**: Programmer & Copilot
-   - **Programmer**: Write code to read the sorted and randomized datasets.
-   - **Copilot**: Help generate code to load the data into the tree structures.
+   - **Programmer**:Use Copilot to generate the tests. Verify tha the code is correct.
+   - **Copilot**: Help generate the tests.
 
-### Step 9: Perform Batch Insertions
+### Step 11: Compare the performance of each of the trees
 - **Responsibility**: Programmer
-   - Insert all names from the datasets into both tree structures and count the number of operations.
+   - Record the number of operations generated in Step 10 in a table for easy comparison.
 
-### Step 10: Perform Batch Lookups
-- **Responsibility**: Programmer and ChatGPT
-   - **Programmer**: Select a random subset of names and perform lookups in both trees. Count the number of comparisons.
-   - **ChatGPT**: Assist in extracting a randome subset of names from the data files.
-
-### Step 11: Perform Batch Deletions
-- **Responsibility**: Programmer
-   - Randomly remove a subset of names from both trees and count the operations involved.
-
-### Step 12: Analyze Performance
-- **Responsibility**: Programmer & ChatGPT
-   - Compile the data from insertions, lookups, and deletions. Analyze and compare the results.
-   - Consult ChatGPT if additional analysis or clarification is needed.
-
-### Step 13: Create Graphs/Tables for Comparison
-- **Responsibility**: Programmer
-   - Generate graphs or tables to show comparative performance results.
-
-### Step 14: Optional Stretch Goals
-- **Responsibility**: Programmer & Copilot
-   - Implement additional structures like AVL trees for advanced comparison.
-   - Copilot can assist in generating the structure for the additional data structures.
 
 ---
 
