@@ -7,7 +7,7 @@ This kata is designed to give developers hands-on experience with two fundamenta
 Participants will implement both a binary search tree and a red-black tree, instrumented to count the number of operations (insertions, deletions, and lookups). By comparing the performance of these trees on two datasets (one sorted and one randomized), participants will gain insights into the efficiency of these structures under different conditions.
 
 ### AI Integration
-- **Copilot**: You can rely on Copilot to assist with code generation, such as building the tree structures and counting operations. However, it's important to review, modify, and understand the code that is generated.
+- **Copilot**: You can rely on Copilot to assist with code generation, such as building the tree structures and counting operations. However, it's important to review, modify, and understand the code that is generated. NOTE: If you don't have access to Copilot, you can use ChatGPT or any other AI client to generate the code.
 - **ChatGPT**: ChatGPT is available for answering questions, providing clarifications, or offering explanations about tree structures, algorithm efficiency, or the performance analysis.
 
 ---
