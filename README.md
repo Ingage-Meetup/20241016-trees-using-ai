@@ -15,8 +15,8 @@ Participants will implement both a binary search tree and a red-black tree, inst
 ## Kata Requirements
 
 ### 1. Data Structures
-- **Binary Search Tree**: A traditional binary search tree (BST) with insertion, deletion, and search methods.
-- **Red-Black Tree**: A self-balancing binary tree that maintains balance via color-coding nodes. This tree should implement balancing logic for insertions and deletions.
+- **Binary Search Tree**: A Binary Search Tree is a hierarchical data structure in which each node has up to two children, known as the left and right child. It maintains an order where the left child’s value is less than the parent’s value, and the right child’s value is greater. BSTs allow efficient searching, insertion, and deletion, with an average time complexity of O(log n). However, their efficiency can degrade to O(n) if the tree becomes unbalanced (e.g., skewed like a linked list).
+- **Red-Black Tree**: A Red-Black Tree is a type of self-balancing Binary Search Tree, which ensures that the tree remains balanced after operations like insertion and deletion. It does this by enforcing properties related to node colors (red or black) and maintaining balance through rotations. The height of the tree is kept approximately O(log n), making Red-Black Trees efficient for searching, inserting, and deleting. The balance guarantees that the worst-case time complexity for these operations is O(log n).
 
 ### 2. Instrumentation
 - Each operation (insertions, deletions, and lookups) should be instrumented to count the number of steps or comparisons made during execution.
